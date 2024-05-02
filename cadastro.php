@@ -16,7 +16,7 @@
                     <h3 class="mb-0">Cadastro</h3>
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form action="index.php" method="$_POST">
                         <div class="mb-3">
                             <label for="nome" class="form-label">Nome</label>
                             <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>

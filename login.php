@@ -1,4 +1,12 @@
-<form>
+<style>
+  button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+<form action="home_page.php" method="$_POST">
 <div class="mx-auto p-2" style="width: 200px;">
 <p class="fs-1">Bem vindo</p>
   <div class="mb-3">
@@ -13,7 +21,9 @@
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Lembrar meu login</label>
   </div>
-  <button type="submit" name="Entrar" class="btn btn-primary">Entrar</button>
-  <button type="submit" class="btn btn-primary">Cadastrar</button>
+  <button type="submit" name="Entrar" id="buttons" class="btn btn-primary">Entrar</button>
+  <a href="cadastro.php" id="buttons" class="btn btn-primary">Cadastrar</a>
     </div>
 </form>
+
+
