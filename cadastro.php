@@ -18,28 +18,28 @@
                 <div class="card-body">
                     <form action="index.php" method="$_POST">
                         <div class="mb-3">
-                            <label for="nome" class="form-label">Nome</label>
-                            <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
+                            <label for="nome" class="form-label">Username</label>
+                            <input type="text" class="form-control" name="username" id="nome" placeholder="Digite seu nome" required>
                         </div>
                         <div class="mb-3">
                             <label for="confirmarSenha" class="form-label">Telefone</label>
-                            <input type="password" class="form-control" id="confirmarSenha" placeholder="Digite seu telefone" required>
+                            <input type="password" class="form-control" id="confirmarSenha" placeholder="Digite seu telefone" name="telefone" required>
                         </div>
                         <div class="mb-3">
                             <label for="confirmarSenha" class="form-label">Endereço</label>
-                            <input type="password" class="form-control" id="confirmarSenha" placeholder="Digite seu endereço" required>
+                            <input type="password" class="form-control" id="confirmarSenha" placeholder="Digite seu endereço" name="endereco" required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Digite seu email" required>
+                            <input type="email" class="form-control" id="email" placeholder="Digite seu email" name="email" required>
                         </div>
                         <div class="mb-3">
                             <label for="senha" class="form-label">Senha</label>
-                            <input type="password" class="form-control" id="senha" placeholder="Digite sua senha" required>
+                            <input type="password" class="form-control" id="senha" placeholder="Digite sua senha"  name="senha" required>
                         </div>
                         <div class="mb-3">
                             <label for="confirmarSenha" class="form-label">Confirmar Senha</label>
-                            <input type="password" class="form-control" id="confirmarSenha" placeholder="Confirme sua senha" required>
+                            <input type="password" class="form-control" id="confirmarSenha" placeholder="Confirme sua senha" nome="confirmarSenha" required>
                         </div>
                         <button type="submit" class="btn btn-primary">Cadastrar</button>
                     </form>
@@ -52,3 +52,4 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+ 
