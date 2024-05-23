@@ -1,10 +1,3 @@
-<?php
-echo $_POST["Entrar"];
-$email = $_POST["Email"];
-if ($Email != "") {
-    
-}
-?>
 
 <!DOCTYPE html>
 <html lang="pt-br">

@@ -8,15 +8,15 @@ private$password = "";
 private $pdo;
 
 public function __construct(){
-    $this->pdo = new PDO($this->dsn, $this->username, $this->password);
+    $this->pdo = new PDO($this->dsn, $this->usuario, $this->password);
 }
 
 public function insertLogin(User $user){
-    $username = $user->getUsername();
+    $usuario = $user->getusuario();
     //fazer isso com os outros gets na classe User.php
 
     try {
-        $stmt = $this->pdo->query("insert into login values (null,'$username','$senha')");
+        $stmt = $this->pdo->query("insert into login values (null,'$usuario','$senha')");
        } catch(PDOException $ex){
            echo "<pre>";
          echo $this->pdo->errorInfo()[2];

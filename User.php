@@ -1,15 +1,14 @@
 <?php
 Class User {
 
-    private $username;
+    private $usuario;
     private $telefone;
     private $endereco;
     private $email;
     private $senha;
-    private $
 
-    public function getUsername(){
-        return $this->username;
+    public function getUsuario(){
+        return $this->usuario;
     }
     public function getTelefone(){
         return $this->telefone;
@@ -25,8 +24,8 @@ Class User {
     }
 
 
-    public function setUsername($username){
-        $this->$username = $username;
+    public function setUsuario($usuario){
+        $this->$usuario = $usuario;
     }
     public function setTelefone($telefone){
         $this->$telefone = $telefone;
