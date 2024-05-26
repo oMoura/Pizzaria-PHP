@@ -1,4 +1,4 @@
-<form action="home_page.php" method="$_POST">
+<form action="verificarLogin.php" method="$_GET">
 <div class="mx-auto p-2" style="width: 200px;">
 <p class="fs-1">Bem vindo</p>
   <div class="mb-3">

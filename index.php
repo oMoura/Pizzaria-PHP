@@ -2,25 +2,20 @@
 
 include "cabecalho.php";
 include "login.php";
-require_once "conexao.php";
 include "rodape.php";
 
+    if(isset($_GET['submit'])){
 
-$user = new User();
-$user->setUsuario($_POST["usuario"]);
-$user->setTelefone($_POST["telefone"]);
-$user->setEndereco($_POST["endereco"]);
-$user->setEmail($_POST["email"]);
-
-if ($_POST["senha"] == $_POST["confirmarSenha"]){
-    $user->setSenha($_POST["senha"]);
-
-} else{
-    header("location: /cadastrar.php");
-}
-
-
-$dao = new Dao();
-$dao->insertLogin($user);
-
-?>
+ 
+        require_once "conexao.php";
+ 
+        $usuario = $_GET['usuario'];
+        $senha = $_GET['senha'];
+        $telefone = $_GET['telefone'];
+        $email = $_GET['email'];
+        $endereco = $_GET['endereco'];
+ 
+        $dao = new Dao();
+        $dao->insertLogin($usuario, $senha, $telefone, $email, $endereco);
+ 
+    }

@@ -1,0 +1,18 @@
+create database pizzaria;
+use pizzaria;
+ 
+create table login(
+id int auto_increment primary key not null,
+usuario varchar(30) unique not null,
+senha varchar(30) not null,
+telefone int(12) not null,
+email varchar(50) not null,
+endereco varchar(60) not null
+);
+ 
+create table pizza(
+id_pizza int auto_increment primary key not null,
+sabor varchar(30) not null,
+ingredientes varchar(100) not null,
+valor float(5) not null
+);
