@@ -10,7 +10,7 @@ require_once "cabecalho.php";
                     <h3 class="mb-0">Cadastro</h3>
                 </div>
                 <div class="card-body">
-                    <form action="index.php" method="$_GET">
+                    <form action="index.php" method="post">
                         <div class="mb-3">
                             <label for="usuario" class="form-label">Usuario</label>
                             <input type="text" class="form-control" name="usuario" id="nome" placeholder="Digite seu nome" required>
