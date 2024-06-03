@@ -27,4 +27,9 @@ Class Dao{
     public function insertLogin($usuario, $senha, $telefone, $email, $endereco){
         $stmt = $this->pdo->query("insert into login( usuario, senha, telefone, email, endereco) values ('$usuario', '$senha', '$telefone', '$email', '$endereco')");
     }
+
+    public function mostrarPizza(){
+        $stmt = $this->pdo->query("select * from pizza");
+        return $stmt;
+    }
 }
