@@ -51,9 +51,9 @@ require_once "navbar.php";
             <div class="card">
                 <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="Pizza">
                 <div class="card-body">
-                    <h5 class="card-title">Pizza frango</h5>
-                    <p class="card-text">Molho de tomate, queijo mozarela, manjericão fresco.</p>
-                    <a href="#" class="btn btn-primary">Pedir Agora</a>
+                    <h5 class="card-title">Pizza Frango com catupiry</h5>
+                    <p class="card-text">Molho de tomate, queijo mozarela, frango, catupiry, .</p>
+                    <a href="https://www.saboresajinomoto.com.br/uploads/images/recipes/pizza-de-frango-1.jpg" class="btn btn-primary">Pedir Agora</a>
                 </div>
             </div>
         </div>
@@ -63,7 +63,7 @@ require_once "navbar.php";
                 <div class="card-body">
                     <h5 class="card-title">Pizza Pepperoni</h5>
                     <p class="card-text">Molho de tomate, queijo mozarela, pepperoni picante.</p>
-                    <a href="#" class="btn btn-primary">Pedir Agora</a>
+                    <a href="https://www.minhareceita.com.br/app/uploads/2022/12/pizza-de-pepperoni-caseira-portal-minha-receita.jpg" class="btn btn-primary">Pedir Agora</a>
                 </div>
             </div>
         </div>
@@ -71,9 +71,9 @@ require_once "navbar.php";
             <div class="card">
                 <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="Pizza">
                 <div class="card-body">
-                    <h5 class="card-title">Pizza Vegetariana</h5>
-                    <p class="card-text">Molho de tomate, queijo mozarela, pimentão, cogumelos, cebola, azeitonas.</p>
-                    <a href="#" class="btn btn-primary">Pedir Agora</a>
+                    <h5 class="card-title">Pizza 4 queijos</h5>
+                    <p class="card-text">Molho de tomate, Mussarela, provolone, gorgonzola e Catupiry.</p>
+                    <a href="https://www.pizzaprime.com.br/wp-content/uploads/2018/12/pizza-quatro-queijos-imagem-destacada.jpg" class="btn btn-primary">Pedir Agora</a>
                 </div>
             </div>
         </div>
