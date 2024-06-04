@@ -10,7 +10,7 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Cardápio</a>
+          <a class="nav-link" href="cardapio.php">Cardápio</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Contato</a>
