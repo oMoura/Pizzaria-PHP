@@ -7,19 +7,19 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="home_page.php">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="cardapio.php">Cardápio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contato</a>
+          <a class="nav-link" href="contato.php">Contato</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Carrinho</a>
+          <a class="nav-link" href="carrinho.php">Carrinho</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Usuario</a>
+          <a class="nav-link" href="usuario.php">Usuario</a>
         </li>
       </ul>
     </div>

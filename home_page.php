@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   
     <style>
-
+        
         .jumbotron {
             background-image: url('https://via.placeholder.com/1500x500');
             background-size: cover;
@@ -39,6 +39,7 @@ require_once "navbar.php";
 
 <div class="jumbotron">
     <div class="container">
+        <img src="logo.jpg" alt="">
         <h1 class="display-4">Bem-vindo à Pizzaria-PHP</h1>
         <p class="lead">Venha saborear as melhores pizzas feitas com ingredientes frescos e autênticos.</p>
         <a href="#" class="btn btn-primary btn-lg">Ver Cardápio</a>
@@ -49,11 +50,11 @@ require_once "navbar.php";
     <div class="row">
         <div class="col-md-4">
             <div class="card">
-                <img src="https://www.saboresajinomoto.com.br/uploads/images/recipes/pizza-de-frango-1.jpg" class="btn btn-primary" class="card-img-top" alt="Pizza">
+                <img src="https://www.saboresajinomoto.com.br/uploads/images/recipes/pizza-de-frango-1.jpg" class="btn btn-primary" class="card-img-top" alt="Pizza" width="100%">
                 <div class="card-body">
                     <h5 class="card-title">Pizza Frango com catupiry</h5>
                     <p class="card-text">Molho de tomate, queijo mozarela, frango, catupiry, .</p>
-                    <a href="#">Pedir Agora</a>
+                    <a href="#" class="btn btn-primary">Pedir Agora</a>
                 </div>
             </div>
         </div>
@@ -79,6 +80,7 @@ require_once "navbar.php";
         </div>
     </div>
 </div>
+
 
 <?php
 require_once "rodape.php";

@@ -1,5 +1,8 @@
 <?php
 require_once "cabecalho.php";
+
+
+$_GET['error'];
 ?>
 
 <div class="container mt-5">

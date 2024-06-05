@@ -25,7 +25,13 @@ Class Dao{
     }
 
     public function insertLogin($usuario, $senha, $telefone, $email, $endereco){
-        $stmt = $this->pdo->query("insert into login( usuario, senha, telefone, email, endereco) values ('$usuario', '$senha', '$telefone', '$email', '$endereco')");
+        try {
+            $stmt = $this->pdo->query("insert into login( usuario, senha, telefone, email, endereco) values ('$usuario', '$senha', '$telefone', '$email', '$endereco')");
+        } catch(PDOException $erroCadastro){
+            header("Location: cadastro.php?error=1");
+            echo 'Nome de usuário já existe: '.  $erroCadastro->getMessage(). "\n";
+        }
+        
     }
 
     public function mostrarPizza(){
