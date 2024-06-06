@@ -29,7 +29,6 @@ Class Dao{
             $stmt = $this->pdo->query("insert into login( usuario, senha, telefone, email, endereco) values ('$usuario', '$senha', '$telefone', '$email', '$endereco')");
         } catch(PDOException $erroCadastro){
             header("Location: cadastro.php?error=1");
-            echo 'Nome de usuário já existe: '.  $erroCadastro->getMessage(). "\n";
         }
         
     }
