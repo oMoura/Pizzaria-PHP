@@ -1,5 +1,5 @@
 <?php
-
+//concluido
 include "cabecalho.php";
 include "login.php";
 include "rodape.php";
@@ -20,8 +20,8 @@ include "rodape.php";
             $dao = new Dao();
             $dao->insertLogin($usuario, $senha, $telefone, $email, $endereco);
         } else {
-            header("Location: cadastro.php");
-            echo "Os campos SENHA e CONFIRMAR SENHA devem estar iguais";
+            header("Location: cadastro.php?error=2");
+            
         }
  
  

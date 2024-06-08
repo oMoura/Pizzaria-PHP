@@ -16,3 +16,14 @@ sabor varchar(30) not null,
 ingredientes varchar(100) not null,
 valor float(5) not null
 );
+
+ALTER TABLE pizza
+ADD img_link varchar(100) not null;
+
+UPDATE pizza
+SET img_link = 'https://guiadacozinha.com.br/wp-content/uploads/2019/10/pizza-de-mussarela-10225.jpg'
+WHERE id_pizza = 1;
+
+UPDATE pizza
+SET img_link = 'https://www.saboresajinomoto.com.br/uploads/images/recipes/pizza-de-frango-1.jpg'
+WHERE id_pizza = 2;

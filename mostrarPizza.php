@@ -4,9 +4,8 @@ $id_pizza=['id_pizza'];
 $dao = new Dao();
 $dados = $dao->mostrarPizza($id_pizza);
 $linha = $dados->fetch();
-
-
 ?>
+
 <div class="card" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
   <div class="card-body">

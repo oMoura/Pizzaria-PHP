@@ -10,7 +10,7 @@
     <style>
         
         .jumbotron {
-            background-image: url('https://via.placeholder.com/1500x500');
+            background-image: url('logo2.jpg');
             background-size: cover;
             color: white;
             padding: 100px 0;
@@ -39,7 +39,6 @@ require_once "navbar.php";
 
 <div class="jumbotron">
     <div class="container">
-        <img src="logo.jpg" alt="">
         <h1 class="display-4">Bem-vindo à Pizzaria-PHP</h1>
         <p class="lead">Venha saborear as melhores pizzas feitas com ingredientes frescos e autênticos.</p>
         <a href="#" class="btn btn-primary btn-lg">Ver Cardápio</a>

@@ -37,13 +37,4 @@ Class Dao{
         $stmt = $this->pdo->query("select * from pizza");
         return $stmt;
     }
-
-    public function verificarCadastro($usuario){
-        $stmt = $this->pdo->query("Select usuario from login where usuario='$usuario'");
-        if($stmt->fetch()){
-            header("Location: cadastro.php?erro=1");
-        } else { 
-            header("Location: index.php");
-        }
-}
 }
