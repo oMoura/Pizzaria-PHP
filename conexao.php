@@ -37,4 +37,9 @@ Class Dao{
         $stmt = $this->pdo->query("select * from pizza");
         return $stmt;
     }
+
+    public function mostrarPizzaColun(){
+        $stmt = $this->pdo->query("select id_pizza from pizza");
+        return $stmt;
+    }
 }

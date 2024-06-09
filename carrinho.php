@@ -5,43 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrinho de Pedidos de Pizza</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    
-    .pizza-item {
-      border-bottom: 1px solid #dee2e6;
-      padding: 10px 0;
-    }
-    .pizza-item:last-child {
-      border-bottom: none;
-    }
-  </style>
 </head>
 <body>
 
 <?php
 include "navbar.php";
+include "conexao.php";
 ?>
 
 <div class="container mt-5">
   <h1 class="mb-4">Meu carrinho</h1>
   
+  <?php
+    if(isset($_GET['id_pizza'])){
+      $dao =new Dao();
+      $id_pizza = $_GET['id_pizza'];
+      
+      $dados = $dao->mostrarPizzaColun();
+      while($linha = $dados->fetch()){
+        if ($id_pizza == $dados->fetch()) {
+          ?>
   
-  <div class="row">
-    <div class="col-md-6">
-      <div class="pizza-item">
-        <h3>Pizza de Queijo</h3>
-        <p>Massa fina com queijo mozarela</p>
-        <button class="btn btn-primary">Adicionar ao Carrinho</button>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><?php echo $linha['sabor']?></h5>
+          <p class="card-text"><?php echo $linha['ingredientes']?></p>
+          <a href="#" class="btn btn-primary">R$ <?php echo $linha['valor']?></a>
+        </div>
       </div>
-      <div class="pizza-item">
-        <h3>Pizza de Pepperoni</h3>
-        <p>Massa fina com pepperoni e queijo mozarela</p>
-        <button class="btn btn-primary">Adicionar ao Carrinho</button>
-      </div>
-      <!-- Adicione mais pizzas conforme necessário -->
-    </div>
     
-    <!-- Carrinho -->
+    <?php
+      }
+    }
+  }
+  ?>
+    
     <div class="col-md-6">
       <h2>Pizzaria-PHP</h2>
       <ul id="cart" class="list-group">
@@ -49,7 +47,7 @@ include "navbar.php";
       </ul>
       <hr>
       <h4>Total: R$ <span id="total">0.00</span></h4>
-      <button class="btn btn-success">Finalizar Pedido</button>
+      <a href="final.php" class="btn btn-success">Finalizar Pedido</a>
     </div>
   </div>
 </div>
