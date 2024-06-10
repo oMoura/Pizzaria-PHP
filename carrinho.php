@@ -18,32 +18,35 @@ include "conexao.php";
   
   <?php
     if(isset($_GET['id_pizza'])){
+      $carrinho = [];
       $dao =new Dao();
       $id_pizza = $_GET['id_pizza'];
       
-      $dados = $dao->mostrarPizzaColun();
-      while($linha = $dados->fetch()){
-        if ($id_pizza == $dados->fetch()) {
+      $dados = $dao->mostrarPizzaColun($id_pizza);
+      $carrinho[$i] = $id_pizza;
+      $i++;
+      for ($i ;$i > $i+1; $i++) {
+        while($linha = $dados->fetch()){
           ?>
   
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title"><?php echo $linha['sabor']?></h5>
-          <p class="card-text"><?php echo $linha['ingredientes']?></p>
-          <a href="#" class="btn btn-primary">R$ <?php echo $linha['valor']?></a>
-        </div>
-      </div>
-    
-    <?php
-      }
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title"><?php echo $linha['sabor']?></h5>
+  <p class="card-text"><?php echo $linha['ingredientes']?></p>
+<a class="btn btn-primary">R$ <?php echo $linha['valor']?></a>
+</div>
+</div>
+
+<?php
+      break;  
     }
   }
+}
   ?>
     
     <div class="col-md-6">
       <h2>Pizzaria-PHP</h2>
       <ul id="cart" class="list-group">
-        <!-- Itens do carrinho serão adicionados aqui -->
       </ul>
       <hr>
       <h4>Total: R$ <span id="total">0.00</span></h4>
