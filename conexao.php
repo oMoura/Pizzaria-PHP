@@ -39,7 +39,9 @@ Class Dao{
     }
 
     public function mostrarPizzaColun($id_pizza){
-        $stmt = $this->pdo->query("select * from pizza where id_pizza = $id_pizza");
-        return $stmt;
+        //foreach ($_SESSION['carrinho'] as $id_pizza) {
+            $stmt = $this->pdo->query("select * from pizza where id_pizza = $id_pizza");
+            return $stmt;
+        //}
     }
 }

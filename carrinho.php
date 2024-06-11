@@ -9,6 +9,7 @@
 <body>
 
 <?php
+session_start();
 include "navbar.php";
 include "conexao.php";
 ?>
@@ -18,16 +19,22 @@ include "conexao.php";
   
   <?php
     if(isset($_GET['id_pizza'])){
-      $carrinho = [];
-      $dao =new Dao();
       $id_pizza = $_GET['id_pizza'];
-      
+
+      if (!isset($_SESSION['carrinho'])) {
+        $_SESSION['carrinho'] = [];
+      }
+      if (!empty($_SESSION['carrinho'][$id_pizza])) {
+        $_SESSION['carrinho'][$id_pizza]['quantidade']++;
+      } else {
+        $_SESSION['carrinho'][$id_pizza] = $_GET['id_pizza'][$id_pizza];
+        $_SESSION['carrinho'][$id_pizza]['quantidade'] = 1;
+      }
+        
+      $dao =new Dao();
       $dados = $dao->mostrarPizzaColun($id_pizza);
-      $carrinho[$i] = $id_pizza;
-      $i++;
-      for ($i ;$i > $i+1; $i++) {
-        while($linha = $dados->fetch()){
-          ?>
+      while($linha = $dados->fetch()){
+      ?>
   
 <div class="card">
   <div class="card-body">
@@ -37,11 +44,9 @@ include "conexao.php";
 </div>
 </div>
 
-<?php
-      break;  
+<?php 
+          }
     }
-  }
-}
   ?>
     
     <div class="col-md-6">

@@ -34,6 +34,7 @@
 <body>
 
 <?php
+session_start();
 require_once "navbar.php";
 ?>
 
@@ -41,7 +42,7 @@ require_once "navbar.php";
     <div class="container">
         <h1 class="display-4">Bem-vindo à Pizzaria-PHP</h1>
         <p class="lead">Venha saborear as melhores pizzas feitas com ingredientes frescos e autênticos.</p>
-        <a href="#" class="btn btn-primary btn-lg">Ver Cardápio</a>
+        <a href="cardapio.php" class="btn btn-primary btn-lg">Ver Cardápio</a>
     </div>
 </div>
 
