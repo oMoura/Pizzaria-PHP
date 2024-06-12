@@ -31,3 +31,5 @@ WHERE id_pizza = 2;
 insert into pizza values ('Mussarela','Massa, molho de tomate, mussarela',45,'https://guiadacozinha.com.br/wp-content/uploads/2019/10/pizza-de-mussarela-10225.jpg');
 
 insert into pizza values (2,'Flango','Massa, molho de tomate, catupiry, flango',45,'https://www.saboresajinomoto.com.br/uploads/images/recipes/pizza-de-frango-1.jpg');
+
+insert into pizza values (3,'Calabresa','Massa, molho de tomate, calabresa, cebola',50,'https://cantinagiovannifreddo.com.br/wp-content/uploads/2023/09/PIZZA-DE-CALABRESA.webp');

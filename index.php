@@ -4,6 +4,13 @@ include "cabecalho.php";
 include "login.php";
 include "rodape.php";
 
+    if(isset($_GET ['log'])){
+        if($_GET ['log'] == 1){
+            unset($_SESSION["usuario"]);
+            unset($_SESSION["carrinho"]);
+        }
+    }
+
     if(isset($_POST['submit'])){
 
  

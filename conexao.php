@@ -33,15 +33,18 @@ Class Dao
         
     }
 
-    public function mostrarPizza(){
-        $stmt = $this->pdo->query("select * from pizza");
-        return $stmt;
+    public function mostrarPizza()
+    {
+        return $this->pdo->query("select * from pizza");
     }
 
-    public function mostrarPizzaColun($id_pizza){
-        //foreach ($_SESSION['carrinho'] as $id_pizza) {
-            $stmt = $this->pdo->query("select * from pizza where id_pizza = $id_pizza");
-            return $stmt;
-        //}
+    public function mostrarPizzaColun($id_pizza)
+    {
+        return $this->pdo->query("select * from pizza where id_pizza = $id_pizza");
+    }
+
+    public function calcularTotal($id_pizza)
+    {
+        $stmt = $this->pdo->query("select valor from pizza where id_pizza = $id_pizza");
     }
 }
