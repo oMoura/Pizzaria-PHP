@@ -19,6 +19,7 @@
 
     <?php
     session_start();
+    $valorTotal = 0;
     if (isset($_SESSION['carrinho'])) {
       $pizzas = $_SESSION['carrinho'];
       $dao = new Dao();
@@ -29,12 +30,14 @@
         // var_dump($pizza);
         // echo '</pre>';
         foreach ($dao->mostrarPizzaColun($id_pizza) as $linha) {
+          $valorTotal += $linha['valor'];
     ?>
           <div class="card my-2">
             <div class="card-body">
               <h5 class="card-title"><?php echo $linha['sabor'] ?></h5>
               <p class="card-text"><?php echo $linha['ingredientes'] ?></p>
-              <a class="btn btn-primary">R$ <?php echo $linha['valor'] ?></a>
+              <p class="card-text">R$ <?php echo $linha['valor'] ?></p>
+              <a href="excluirItem.php?excluir=<?php echo $linha['id_pizza'] ?>" class="btn btn-primary"> Excluir </a>
             </div>
           </div>
     <?php
@@ -49,7 +52,7 @@
       <hr>
 
       <h4>
-        Total: R$ <span id="total"><?php echo $linha['valor'] ?></span>
+        Total: R$ <span id="total"><?php echo $valorTotal ?></span>
       </h4>
       <a href="final.php" class="btn btn-success">Finalizar Pedido</a>
     </div>

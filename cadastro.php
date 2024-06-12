@@ -3,7 +3,7 @@
 require_once "cabecalho.php";
 
 if(isset($_GET ['error'])){
-    if($_GET ['error'] == 1){ 
+    if($_GET ['error'] == 1){ ;
 
 ?>
 

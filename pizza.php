@@ -1,3 +1,22 @@
+<style>
+    .card-img-top {
+      height: 200px;
+      width: 200px;
+      border: 1px solid black;
+      border-radius: 50px 20px;
+      margin-top: 30;
+      object-fit: cover;
+    }
+
+    .card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 15px;
+      background-color: white;
+    }
+  </style>
+
 <?php
 require_once "conexao.php";
 $dao = new Dao();
@@ -6,24 +25,6 @@ $dados = $dao->mostrarPizza($id_pizza);
 
 while ($linha = $dados->fetch()) {
 ?>
-  <style>
-    .card-img-top {
-      height: 250;
-      width: 250;
-      border: 1px solid black;
-      border-radius: 50px 20px;
-      margin-top: 15;
-      object-fit: cover;
-    }
-
-    .card {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      background-color: white;
-    }
-  </style>
 
   <div class="card">
     <img src="<?php echo $linha['img_link'] ?>" class="card-img-top" alt="...">

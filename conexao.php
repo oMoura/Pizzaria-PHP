@@ -30,7 +30,6 @@ Class Dao
         } catch(PDOException $erroCadastro){
             header("Location: cadastro.php?error=1");
         }
-        
     }
 
     public function mostrarPizza()
@@ -41,10 +40,5 @@ Class Dao
     public function mostrarPizzaColun($id_pizza)
     {
         return $this->pdo->query("select * from pizza where id_pizza = $id_pizza");
-    }
-
-    public function calcularTotal($id_pizza)
-    {
-        $stmt = $this->pdo->query("select valor from pizza where id_pizza = $id_pizza");
     }
 }
