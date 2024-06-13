@@ -19,6 +19,9 @@
           <a class="nav-link" href="carrinho.php">Carrinho</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="pedido.php">Pedido</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="index.php?login=1">Sair</a>
         </li>
       </ul>

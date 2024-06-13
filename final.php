@@ -1,6 +1,7 @@
 <?php
 include "cabecalho.php";
 include "navbar.php";
+include "conexao.php";
 ?>
 
     <div class="container">
@@ -10,20 +11,31 @@ include "navbar.php";
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Detalhes do Pedido</h5>
+
+                        <?php
+                        session_start();
+                        $valorTotal = 0;
+                        if (isset($_SESSION['carrinho'])) {
+                            $pizzas = $_SESSION['carrinho'];
+                            $dao = new Dao();
+
+                            foreach ($pizzas as $id_pizza => $pizza) {
+                                foreach ($dao->mostrarPizzaColun($id_pizza) as $linha) {
+                                    $valorTotal += $linha['valor'];
+                        ?>
                         <ul class="list-group">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Pizza de Pepperoni
-                                <span class="badge bg-primary rounded-pill">$12.99</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Pizza de Queijo
-                                <span class="badge bg-primary rounded-pill">$10.99</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Total
-                                <span class="badge bg-success rounded-pill">$23.98</span>
+                                <?php echo $linha['sabor'] ?>
+                                <span class="badge bg-primary rounded-pill">R$ <?php echo $linha['valor'] ?></span>
                             </li>
                         </ul>
+
+                        <?php
+                                }
+                            }
+                        }
+                        ?>
+                        <h5>Total: R$ <?php echo $valorTotal ?></h5>
                     </div>
                 </div>
             </div>
@@ -31,7 +43,7 @@ include "navbar.php";
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Detalhes do Pagamento</h5>
-                        <form>
+                        <form action="limparCarrinho.php" method="post">
                             <div class="mb-3">
                                 <label for="cardNumber" class="form-label">Número do Cartão</label>
                                 <input type="text" class="form-control" id="cardNumber" placeholder="XXXX-XXXX-XXXX-XXXX" required>
