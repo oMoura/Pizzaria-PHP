@@ -1,23 +1,18 @@
 <?php
 session_start();
-$i = 0;
 
-$pizzaExcluida = $_GET['excluir'];
-$pizzas = $_SESSION['carrinho'];
-echo $pizzaExcluida;
-$_SESSION['carrinho'];
-for ($i > 10; $i++;) {
-  if ($pizzas[$i] == [$pizzaExcluida]) {
-    $pizzas[$i] = [];
-    break;
+if(isset($_GET['excluir'])){
+  $id_pizza = $_GET['excluir'];
+
+
+  if (!isset($_SESSION['carrinho'][$id_pizza])) {
+    $_SESSION['carrinho'][$id_pizza] = [
+      'quantidade' => 1
+    ];
   } else {
-    echo $i;
+    $_SESSION['carrinho'][$id_pizza]['quantidade']++;
   }
 }
-
-echo '<pre>';
-var_dump($pizzas);
-echo '</pre>';
 
 
 //header("Location: carrinho.php");
