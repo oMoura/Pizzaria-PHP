@@ -32,7 +32,7 @@ while ($linha = $dados->fetch()) {
     <div class="card-body">
       <h5 class="card-title"><?php echo $linha['sabor'] ?></h5>
       <p class="card-text"><?php echo $linha['ingredientes'] ?></p>
-      <a href="adicionaritem.php?id_pizza=<?php echo $linha['id_pizza'] ?>" class="btn btn-primary">R$ <?php echo $linha['valor'] ?></a>
+      <a href="adicionarItem.php?id_pizza=<?php echo $linha['id_pizza'] ?>" class="btn btn-primary">R$ <?php echo $linha['valor'] ?></a>
     </div>
   </div>
 
