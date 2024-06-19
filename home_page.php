@@ -53,7 +53,7 @@ require_once "navbar.php";
                 <div class="card-body">
                     <h5 class="card-title">Pizza Frango com catupiry</h5>
                     <p class="card-text">Molho de tomate, queijo mozarela, frango, catupiry, .</p>
-                    <a href="#" class="btn btn-primary">Pedir Agora</a>
+                    <a href="cardapio.php" class="btn btn-primary">Pedir Agora</a>
                 </div>
             </div>
         </div>
@@ -63,7 +63,7 @@ require_once "navbar.php";
                 <div class="card-body">
                     <h5 class="card-title">Pizza Pepperoni</h5>
                     <p class="card-text">Molho de tomate, queijo mozarela, pepperoni picante.</p>
-                    <a href="#" class="btn btn-primary">Pedir Agora</a>
+                    <a href="cardapio.php" class="btn btn-primary">Pedir Agora</a>
                 </div>
             </div>
         </div>
@@ -73,7 +73,7 @@ require_once "navbar.php";
                 <div class="card-body">
                     <h5 class="card-title">Pizza 4 queijos</h5>
                     <p class="card-text">Molho de tomate, Mussarela, provolone, gorgonzola e Catupiry.</p>
-                    <a href="#" class="btn btn-primary">Pedir Agora</a>
+                    <a href="cardapio.php" class="btn btn-primary">Pedir Agora</a>
                 </div>
             </div>
         </div>

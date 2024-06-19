@@ -1,5 +1,7 @@
 create database pizzaria;
 use pizzaria;
+
+use grupo05php;
  
 create table login(
 id int auto_increment primary key not null,
@@ -25,3 +27,9 @@ insert into pizza values ('Mussarela','Massa, molho de tomate, mussarela',45,'ht
 insert into pizza values (2,'Flango','Massa, molho de tomate, catupiry, flango',45,'https://www.saboresajinomoto.com.br/uploads/images/recipes/pizza-de-frango-1.jpg');
 
 insert into pizza values (3,'Calabresa','Massa, molho de tomate, calabresa, cebola',50,'https://cantinagiovannifreddo.com.br/wp-content/uploads/2023/09/PIZZA-DE-CALABRESA.webp');
+
+insert into pizza values (4,'Portuguesa','Massa, molho de tomate, presunto, mussarela, cebola, palmito, ovo, milho e ervilha',55,'https://folhadomate.com/wp-content/uploads/2016/09/48388-receita-de-pizza-portuguesa-1.jpg');
+
+UPDATE pizza
+SET img_link = 'https://folhadomate.com/wp-content/uploads/2016/09/48388-receita-de-pizza-portuguesa-1.jpg'
+WHERE id_pizza = 4;

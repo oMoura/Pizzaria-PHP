@@ -62,7 +62,9 @@ if(isset($_SESSION['pedidoCliente'])){
                             }
                         }
                     ?>
-                        <h5>Valor total do pedido: R$ <?php echo $valorTotal ?></h5>
+                        <h5>Valor total: R$ <?php echo $valorTotal ?></h5>
+                        <h5>Endereço:</h5>
+                        <span><?php echo $_SESSION['endereco'] ?></span>
                     </div>
                 </div>
             </div>

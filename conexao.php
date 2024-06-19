@@ -1,9 +1,9 @@
 <?php
 Class Dao
 {    
-    private $dsn = "mysql:host=localhost;dbname=pizzaria";
-    private $username = "root";
-    private $password = "";
+    private $dsn = "mysql:host=192.168.8.10;dbname=grupo05php";
+    private $username = "grupophp05";
+    private $password = "php05";
     private $pdo;
 
     public function __construct(){

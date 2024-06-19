@@ -56,6 +56,20 @@ include "conexao.php";
                                 <label for="cvv" class="form-label">CVV</label>
                                 <input type="text" class="form-control" id="cvv" placeholder="XXX" required>
                             </div>
+
+                            <h5 class="card-title">Endereço</h5>
+                            <div class="mb-3">  
+                                <label for="rua" class="form-label">Rua</label>
+                                <input name="rua" type="text" class="form-control" id="rua" placeholder="Sua rua e número" required>
+                            </div>
+                            <div class="mb-3">  
+                                <label for="rua" class="form-label">Bairro</label>
+                                <input type="text" class="form-control" id="bairro" placeholder="Seu bairro" required>
+                            </div>
+                            <div class="mb-3">  
+                                <label for="rua" class="form-label">Complemento</label>
+                                <input type="text" class="form-control" id="complemento" placeholder="Complemento" required>
+                            </div>
                             <button type="submit" class="btn btn-primary">Pagar</button>
                         </form>
                     </div>
