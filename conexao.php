@@ -52,6 +52,11 @@ Class Dao
         return $this->pdo->query("select * from pedido WHERE usuario = '$usuario' and status = 'pendente'");
     }
 
+    public function mostrarPedidosAdmin()
+    {
+        return $this->pdo->query("select * from pedido WHERE status = 'pendente'");
+    }
+
     public function concluirPedido($id_pedido)
     {
         return $this->pdo->query("update pedido set status = 'finalizado'
