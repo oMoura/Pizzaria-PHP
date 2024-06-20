@@ -1,6 +1,7 @@
 create database pizzaria;
 use pizzaria;
 
+create database grupo05php;
 use grupo05php;
  
 create table login(
@@ -22,13 +23,33 @@ valor float(5) not null
 ALTER TABLE pizza
 ADD img_link varchar(100) not null;
 
-insert into pizza values ('Mussarela','Massa, molho de tomate, mussarela',45,'https://guiadacozinha.com.br/wp-content/uploads/2019/10/pizza-de-mussarela-10225.jpg');
+create table pedido(
+    id_pedido int auto_increment primary key not null,
+    usuario varchar(30) not null,
+    descricao varchar(100) not null,
+    valor_total float(4) not null,
+    rua varchar(30) not null,
+    status varchar(10)
+);
+
+insert into pizza values (1,'Mussarela','Massa, molho de tomate, mussarela',45,'https://guiadacozinha.com.br/wp-content/uploads/2019/10/pizza-de-mussarela-10225.jpg');
 
 insert into pizza values (2,'Flango','Massa, molho de tomate, catupiry, flango',45,'https://www.saboresajinomoto.com.br/uploads/images/recipes/pizza-de-frango-1.jpg');
 
 insert into pizza values (3,'Calabresa','Massa, molho de tomate, calabresa, cebola',50,'https://cantinagiovannifreddo.com.br/wp-content/uploads/2023/09/PIZZA-DE-CALABRESA.webp');
 
 insert into pizza values (4,'Portuguesa','Massa, molho de tomate, presunto, mussarela, cebola, palmito, ovo, milho e ervilha',55,'https://folhadomate.com/wp-content/uploads/2016/09/48388-receita-de-pizza-portuguesa-1.jpg');
+
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+
+insert into peedido (usuario, descricao, valor_total, status) values ('$usuario','$descricao','$valor_total','pendente');
+select * from pedido WHERE usuario = $_SESSION["usuario"] and status = 'pendente'
+
+UPDATE pedido
+SET status = 'finalizado'
+WHERE id_pedido = $id_pedido
+
 
 UPDATE pizza
 SET img_link = 'https://folhadomate.com/wp-content/uploads/2016/09/48388-receita-de-pizza-portuguesa-1.jpg'

@@ -44,11 +44,11 @@ if(isset($_SESSION['pedidoCliente'])){
                         $valorTotal = 0;
                     if (isset($_SESSION['pedidoCliente'])) {
                         $pizzas = $_SESSION['pedidoCliente'];
-                    $dao = new Dao();
+                        $dao = new Dao();
                 
-                foreach ($pizzas as $id_pizza => $pizza) {
-                    foreach ($dao->mostrarPizzaColun($id_pizza) as $linha) {
-                        $valorTotal += $linha['valor'];
+                        foreach ($pizzas as $id_pizza => $pizza) {
+                            foreach ($dao->mostrarPizzaColun($id_pizza) as $linha) {
+                                $valorTotal += $linha['valor'];
                     ?>
                         <ul class="list-group">
                             <li class="list-group-item d-flex justify-content-between align-items-center">

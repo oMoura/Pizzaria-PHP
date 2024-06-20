@@ -1,9 +1,9 @@
 <?php
 Class Dao
 {    
-    private $dsn = "mysql:host=192.168.8.10;dbname=grupo05php";
-    private $username = "grupophp05";
-    private $password = "php05";
+    private $dsn = "mysql:host=localhost;dbname=grupo05php";
+    private $username = "root";
+    private $password = "";
     private $pdo;
 
     public function __construct(){
@@ -40,5 +40,21 @@ Class Dao
     public function mostrarPizzaColun($id_pizza)
     {
         return $this->pdo->query("select * from pizza where id_pizza = $id_pizza");
+    }
+
+    public function insertPedido($usuario,$descricao,$valorTotal,$rua)
+    {
+        $stmt = $this->pdo->query("insert into pedido (usuario, descricao, valor_total, rua,status) values ('$usuario','$descricao','$valorTotal','$rua','pendente')");
+    }
+
+    public function mostrarPedidos($usuario)
+    {
+        return $this->pdo->query("select * from pedido WHERE usuario = '$usuario' and status = 'pendente'");
+    }
+
+    public function concluirPedido($id_pedido)
+    {
+        return $this->pdo->query("update pedido set status = 'finalizado'
+        where id_pedido = $id_pedido");
     }
 }
